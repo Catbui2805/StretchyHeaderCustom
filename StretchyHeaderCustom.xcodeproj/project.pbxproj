@@ -13,6 +13,9 @@
 		F5E208A323C4EE1A00AD83E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5E208A123C4EE1A00AD83E9 /* LaunchScreen.storyboard */; };
 		F5E208B123C4EEAB00AD83E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E208AF23C4EEAB00AD83E9 /* HomeViewController.swift */; };
 		F5E208B223C4EEAB00AD83E9 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E208B023C4EEAB00AD83E9 /* HomeViewController.xib */; };
+		F5E208B723C4F6BE00AD83E9 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E208B523C4F6BE00AD83E9 /* HomeCell.swift */; };
+		F5E208B823C4F6BE00AD83E9 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5E208B623C4F6BE00AD83E9 /* HomeCell.xib */; };
+		F5E208BC23C4F85D00AD83E9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E208BA23C4F85D00AD83E9 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F5E208A423C4EE1A00AD83E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5E208AF23C4EEAB00AD83E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F5E208B023C4EEAB00AD83E9 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F5E208B523C4F6BE00AD83E9 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		F5E208B623C4F6BE00AD83E9 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		F5E208BA23C4F85D00AD83E9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +107,29 @@
 		F5E208AE23C4EE8E00AD83E9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F5E208B923C4F83200AD83E9 /* HeaderView */,
+				F5E208B323C4F67C00AD83E9 /* HomeCells */,
 				F5E208AF23C4EEAB00AD83E9 /* HomeViewController.swift */,
 				F5E208B023C4EEAB00AD83E9 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		F5E208B323C4F67C00AD83E9 /* HomeCells */ = {
+			isa = PBXGroup;
+			children = (
+				F5E208B523C4F6BE00AD83E9 /* HomeCell.swift */,
+				F5E208B623C4F6BE00AD83E9 /* HomeCell.xib */,
+			);
+			path = HomeCells;
+			sourceTree = "<group>";
+		};
+		F5E208B923C4F83200AD83E9 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				F5E208BA23C4F85D00AD83E9 /* HeaderView.swift */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +192,7 @@
 			files = (
 				F5E208A323C4EE1A00AD83E9 /* LaunchScreen.storyboard in Resources */,
 				F5E208A023C4EE1A00AD83E9 /* Assets.xcassets in Resources */,
+				F5E208B823C4F6BE00AD83E9 /* HomeCell.xib in Resources */,
 				F5E208B223C4EEAB00AD83E9 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,8 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5E208BC23C4F85D00AD83E9 /* HeaderView.swift in Sources */,
 				F5E2089723C4EE1900AD83E9 /* AppDelegate.swift in Sources */,
 				F5E2089923C4EE1900AD83E9 /* SceneDelegate.swift in Sources */,
+				F5E208B723C4F6BE00AD83E9 /* HomeCell.swift in Sources */,
 				F5E208B123C4EEAB00AD83E9 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
