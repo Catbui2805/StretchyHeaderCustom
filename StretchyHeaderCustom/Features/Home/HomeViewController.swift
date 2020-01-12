@@ -9,29 +9,39 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     fileprivate var padding: CGFloat = 16
+    
+    var headerView: HeaderView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         
     }
-
+    
 }
 
 extension HomeViewController {
     func setupViews() {
+        configureRegister()
         setupCollectionView()
-     }
+    }
+    
+    func configureRegister() {
+        collectionView.register(UINib(nibName: "HomeCell", bundle: nil),
+                                forCellWithReuseIdentifier: "HomeCell")
+        collectionView.register(HeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: "HeaderView")
+    }
     
     func setupCollectionView() {
-        collectionView.register(UINib(nibName: "HomeCell", bundle: nil), forCellWithReuseIdentifier: "HomeCell")
+        let layout: UICollectionViewFlowLayout = StretchyHeaderLayout()
         
-        collectionView.register(HeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderView")
-        
+        collectionView!.collectionViewLayout = layout
         collectionView.contentInsetAdjustmentBehavior = .never
     }
     
@@ -39,6 +49,21 @@ extension HomeViewController {
         return .lightContent
     }
     
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // MARK:  configure animation
+        //        let contentOffsetY = scrollView.contentOffset.y
+        //        print(contentOffsetY)
+        //
+        //        if contentOffsetY > 0 {
+        //            headerView?.animator.fractionComplete = 0
+        //            return
+        //        }
+        //        headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
+        
+    }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -58,16 +83,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     // MARK:  Header view
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderView", for: indexPath) as! HeaderView
-    
-//        header.imageView.image = UIImage(named: "2")
-        return header
+        headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderView", for: indexPath) as? HeaderView
+        return headerView ?? UICollectionReusableView()
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 340)
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
@@ -76,11 +98,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: padding, left: 0, bottom: padding, right: 0)
+        return .init(top: padding, left: padding, bottom: padding, right: padding)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 40
+        return 10
     }
 }
 

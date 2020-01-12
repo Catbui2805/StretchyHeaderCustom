@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F58F7EFB23CB81C000FF0984 /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F7EFA23CB81C000FF0984 /* StretchyHeaderLayout.swift */; };
+		F58F7EFD23CB917500FF0984 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58F7EFC23CB917500FF0984 /* Extensions+UIView.swift */; };
 		F5E2089723C4EE1900AD83E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2089623C4EE1900AD83E9 /* AppDelegate.swift */; };
 		F5E2089923C4EE1900AD83E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5E2089823C4EE1900AD83E9 /* SceneDelegate.swift */; };
 		F5E208A023C4EE1A00AD83E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5E2089F23C4EE1A00AD83E9 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F58F7EFA23CB81C000FF0984 /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		F58F7EFC23CB917500FF0984 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		F5E2089323C4EE1900AD83E9 /* StretchyHeaderCustom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StretchyHeaderCustom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5E2089623C4EE1900AD83E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5E2089823C4EE1900AD83E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F58F7EF923CB818A00FF0984 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F58F7EFA23CB81C000FF0984 /* StretchyHeaderLayout.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		F58F7EFE23CB918300FF0984 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58F7EFC23CB917500FF0984 /* Extensions+UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F5E2088A23C4EE1900AD83E9 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +93,7 @@
 		F5E208AA23C4EE2400AD83E9 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F58F7EFE23CB918300FF0984 /* Extensions */,
 				F5E208AE23C4EE8E00AD83E9 /* Home */,
 			);
 			path = Features;
@@ -107,6 +128,7 @@
 		F5E208AE23C4EE8E00AD83E9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F58F7EF923CB818A00FF0984 /* Custom */,
 				F5E208B923C4F83200AD83E9 /* HeaderView */,
 				F5E208B323C4F67C00AD83E9 /* HomeCells */,
 				F5E208AF23C4EEAB00AD83E9 /* HomeViewController.swift */,
@@ -204,6 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58F7EFD23CB917500FF0984 /* Extensions+UIView.swift in Sources */,
+				F58F7EFB23CB81C000FF0984 /* StretchyHeaderLayout.swift in Sources */,
 				F5E208BC23C4F85D00AD83E9 /* HeaderView.swift in Sources */,
 				F5E2089723C4EE1900AD83E9 /* AppDelegate.swift in Sources */,
 				F5E2089923C4EE1900AD83E9 /* SceneDelegate.swift in Sources */,
